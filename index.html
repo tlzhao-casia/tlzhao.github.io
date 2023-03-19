@@ -1,15 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main Page</title>
+    <link rel="stylesheet" type="text/css" href="css/common.css">
 </head>
+
 <body>
     <div class="row">
         <!-- 标题 -->
-        <h1>TinyNeRF: Towards 100x Compression of Voxel Radiance Fields</h1>
+        <h1 align="center">TinyNeRF: Towards 100x Compression of Voxel Radiance Fields</h1>
     </div>
+    <div class="row">
+        <div id="authors">
+            <ul>
+                <li><p>Tianli Zhao</p></li>
+                <li><p>Jiayuan Chen</p></li>
+                <li><p>Cong Leng</p></li>
+                <li><p>Jian Cheng</p></li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="paperinfo">
+            <ul>
+                <li>
+                    <a href="index.html">
+                        <img src="image/paper.png" height="100px">
+                        <p>Paper</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">
+                        <img src="image/github-logo.png" height="100px">
+                        <p>Code</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <h2 align="center">Abstract</h2>
+        <p>Voxel grid representation of 3D scene properties has been widely used to improve the training or rendering
+            speed of the Neural Radiance Fields (NeRF) while at the same time achieving high synthesis quality. However,
+            these methods accelerate the original NeRF at the expense of extra storage demand, which hinders their
+            applications in many scenarios. To solve this limitation, we present TinyNeRF, a three-stage pipeline:
+            frequency domain transformation, pruning and quantization that work together to reduce the storage demand of
+            the voxel grids with little to no effects on their speed and synthesis quality. Based on the prior knowledge
+            of visual signals sparsity in the frequency domain, we convert the original voxel grids in the frequency
+            domain via block-wise discrete cosine transformation (DCT). Next, we apply pruning and quantization to
+            enforce the DCT coefficients to be sparse and low-bit. Our method can be optimized from scratch in an
+            end-to-end manner, and can typically compress the original models by 2 orders of magnitude with minimal
+            sacrifice on speed and synthesis quality.</p>
+    </div>
+    <div class="row">
+        <div class="comparison" id="phongCompare">
+            <video id="phong" autoplay loop muted playsinline src="video/materials_rougher.mp4" onplay=playVids(this)
+                height="100%" width="100%"></video>
+            <video id="phongAfter" autoplay loop muted playsinline src="video/materials_shinier.mp4" height="100%"
+                width="100%"></video>
+            <canvas id="phongMerge"></canvas>
+        </div>
+    </div>
+    <script src="js/video_compare.js"></script>
 </body>
+
 </html>

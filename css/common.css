@@ -1,4 +1,79 @@
+*{
+    font-family: 'Times New Roman', Times, serif;
+}
 .row {
-    padding-left: 10px;
-    padding-right: 10px;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+#phongCompare {
+    height: 400px;
+    width: 400px;
+    position: relative;
+    left: 50%;
+    margin-left: -200px;
+}
+
+p{
+    font-size: 20px;
+}
+
+.paperinfo {
+    text-align: center;
+}
+.paperinfo ul {
+    display: block;
+    list-style: none;
+}
+.paperinfo ul li {
+    margin-left: 10px;
+    display: inline-block;
+    width: 160px;
+    height: 130px;
+    font-size: 20px;
+    position: relative;
+}
+
+.paperinfo ul li a {
+    position: absolute;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    margin: 0;
+    padding: 0;
+}
+.paperinfo ul li a img{
+    position: absolute;
+    left: 30px;
+    padding: 0;
+    margin: 0;
+    height: 100px;
+}
+.paperinfo ul li a p {
+    position: absolute;
+    top: 100px;
+    margin: 0;
+    padding: 0;
+    left: 0;
+    width: 156px;
+}
+
+#authors {
+    text-align: center;
+    align-items: center;
+}
+#authors ul {
+    display: block;
+    list-style: none;
+}
+#authors ul li {
+    display: inline-block;
+    padding: 0px 20px;
+    margin: 0;
+}
+#authors ul li p{
+    margin: 0;
+    padding: 0;
 }
